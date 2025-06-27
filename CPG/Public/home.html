@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page d'accueil de l'Institut Supérieur des Études Technologiques de Gafsa">
+    <title>CPG Gafsa - Accueil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('bg.jpeg');
+            background-color: #f0f0f0; 
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        header {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            animation: bounce 2s infinite;
+        }
+
+        .navbar-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            width: 100%;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+            margin-top: 60px; 
+        }
+
+        .transparent-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap; 
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+            transition: left 0.6s ease;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .card-image {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-image {
+            transform: scale(1.1);
+        }
+
+        .card-text {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            transition: color 0.4s ease;
+        }
+
+        .card:hover .card-text {
+            color: #007BFF;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+       
+        @media (max-width: 768px) {
+            .navbar-title {
+                font-size: 16px;
+            }
+
+            .welcome-message {
+                font-size: 20px;
+            }
+
+            .card-container {
+                gap: 20px;
+            }
+
+            .card {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-title {
+                font-size: 14px;
+            }
+
+            .welcome-message {
+                font-size: 18px;
+            }
+
+            .card {
+                width: 150px;
+                padding: 15px;
+            }
+
+            .card-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-logo">
+            <img src="CPG.svg" alt="CPG Gafsa" class="logo">
+            <span class="navbar-title">Compagnie de Phosphate de Gafsa</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="transparent-box">
+            <p class="welcome-message">Bonjour, tapez sur votre carte</p>
+            <div class="card-container">
+                <div class="card" id="employe-card">
+                    <img src="icon-1.png" alt="Employé" class="card-image">
+                    <p class="card-text">Employé</p>
+                </div>
+                <div class="card" id="admin-card">
+                    <img src="admin.png" alt="Admin" class="card-image">
+                    <p class="card-text">Admin</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+   
+        document.getElementById('employe-card').addEventListener('click', () => {
+            window.location.href = 'login.php';
+        });
+
+        document.getElementById('admin-card').addEventListener('click', () => {
+            window.location.href = 'admin.php';
+        });
+    </script>
+</body>
+</html>
