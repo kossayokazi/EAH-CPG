@@ -1,13 +1,25 @@
-This project is a time and work management system for CPG employees, developed using HTML, CSS, and Vanilla JavaScript on the front end, and a PHP/MySQL back end. The system features an admin/employee interface, user authentication, and employee management/time/messages/payroll/personal account tracking.
-Voici une reformulation professionnelle adaptée pour un message **de commit GitHub** clair, concis et structuré :
-🚀 features: integration of core modules and technical enhancements
-🔐 Dual authentication (Admin/Employee) with secure session handling
-👥 Employee management (CRUD + detailed profile)
-📅 Interactive schedule (color coding, holidays/weekends marked)
-💬 Internal messaging (admin → employee + message history)
-📊 Role-based dashboards (admin and employee views)
-🎨 Animated UI with responsive design (mobile/desktop)
-💾 Database export included (cpg.sql)
-Technologies
-Frontend: HTML5, CSS3 (Flexbox/Grid, Animations), JavaScript Vanilla
-Backend: PHP (Sessions, CRUD), MySQL (Relations DB)
+# CPG Time and Work Management System
+
+This project is a comprehensive time and work management system for CPG employees, featuring a dual-interface (admin/employee) with robust functionality. Developed using modern web technologies, it provides secure authentication, employee management, scheduling, messaging, and role-based dashboards.
+
+## Features
+
+- 🚀 **Core Modules & Technical Enhancements**: Integrated system for seamless workflow management  
+- 🔐 **Dual Authentication**: Secure session handling for Admin and Employee roles  
+- 👥 **Employee Management**: CRUD operations with detailed profile tracking  
+- 📅 **Interactive Schedule**: Color-coded events with holidays/weekends marked  
+- 💬 **Internal Messaging**: Admin-to-employee communication with message history  
+- 📊 **Role-Based Dashboards**: Customized views for admin and employee roles  
+- � **Animated UI**: Responsive design optimized for mobile and desktop  
+- 💾 **Database Export**: Included MySQL dump (cpg.sql) for easy setup  
+
+## Technologies  
+
+**Frontend**:  
+- HTML5  
+- CSS3 (Flexbox/Grid, Animations)  
+- Vanilla JavaScript  
+
+**Backend**:  
+- PHP (Sessions, CRUD)  
+- MySQL (Relational Database)  
