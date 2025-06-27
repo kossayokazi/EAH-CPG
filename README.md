@@ -1,4 +1,4 @@
-# CPG Time and Work Management System
+# CPG Work Management System
 
 This project is a comprehensive time and work management system for CPG employees, featuring a dual-interface (admin/employee) with robust functionality. Developed using modern web technologies, it provides secure authentication, employee management, scheduling, messaging, and role-based dashboards.
 
